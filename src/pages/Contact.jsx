@@ -1,17 +1,41 @@
-import React from 'react';
-import Section from '../components/Section';
+import { motion } from 'framer-motion';
 
 const Contact = () => (
-    <Section id="contact">
-        <div className="p-8">
-        <h1 className="text-4xl mb-4">Contact</h1>
-        <p>
-            Let's get in touch! You can reach me at
-            <a href="mailto:cameron
-            @cameroncoleman.dev" className="hover:text-primary">Blah Blah Blah</a>
-        </p>
-        </div>
-    </Section>
+  <Section id="contact">
+    <div className="p-8 max-w-md mx-auto">
+      <motion.h1 
+        initial={{ y: -50 }}
+        animate={{ y: 0 }}
+        className="text-4xl mb-4 pixel-text"
+      >
+        Contact Terminal
+      </motion.h1>
+      <form className="space-y-4 pixel-form">
+        <input
+          type="text"
+          placeholder="Name"
+          className="w-full p-2 bg-black text-primary border-2 border-primary pixel-input"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full p-2 bg-black text-primary border-2 border-primary pixel-input"
+        />
+        <textarea
+          placeholder="Message"
+          className="w-full p-2 bg-black text-primary border-2 border-primary pixel-input"
+          rows="4"
+        />
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="w-full p-2 bg-primary text-black font-bold pixel-button"
+        >
+          SEND TRANSMISSION
+        </motion.button>
+      </form>
+    </div>
+  </Section>
 );
 
 export default Contact;

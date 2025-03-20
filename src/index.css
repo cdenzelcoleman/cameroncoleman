@@ -1,12 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 body {
   background-color: #000;
   color: #fff;
-  font-family: 'retro', system-ui, sans-serif;
-  overflow-x: hidden;
+  font-family: 'Press Start 2P', monospace; /* Use monospace fallback */
+}
+
+.pixel-border {
+  border: 3px solid #ff007f;
+  box-shadow: 4px 4px 0 #00dfff;
+}
+
+.pixel-text {
+  text-shadow: 2px 2px #ff007f;
+}
+
+.pixel-button {
+  border: 2px solid #00dfff;
+  box-shadow: 3px 3px 0 #ff007f;
+  transition: all 0.1s ease;
+}
+
+.pixel-button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+.pixel-input {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
 }

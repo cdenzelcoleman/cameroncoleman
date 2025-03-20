@@ -9,8 +9,9 @@ import Bonus from './pages/Bonus';
 import './App.css';
 
 function App() {
-  return (
-    <div className="container">
+    return (
+      <div className="container">
+        <h1 className="text-primary">Test Text</h1>
       <Navbar />
       <main>
         <About />
@@ -21,7 +22,7 @@ function App() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
 export default App;
