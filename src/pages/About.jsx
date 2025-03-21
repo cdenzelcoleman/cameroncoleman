@@ -1,6 +1,5 @@
 import Section from '../components/Section';
 
-// Option 1: If using public assets
 const About = () => (
   <Section id="about" className="bg-[url('/assets/pixel-bg.png')] bg-cover">
     <div className="p-8">
@@ -11,9 +10,5 @@ const About = () => (
     </div>
   </Section>
 );
-
-// Option 2: If using src/assets (import required)
-// import bgImage from '../assets/pixel-bg.png';
-// className={`bg-[url(${bgImage})]`}
 
 export default About;

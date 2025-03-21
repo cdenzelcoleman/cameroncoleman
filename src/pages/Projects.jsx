@@ -7,7 +7,7 @@ const projectNodes = [
     id: '1',
     position: { x: 0, y: 0 },
     data: { 
-      label: 'Portfolio Site',
+      label: 'Project Cameron',
       tech: 'React/Tailwind',
       year: '2024'
     },

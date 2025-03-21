@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
 
 const Section = ({ id, children, className = '' }) => {
   return (
-    <section id={id} className={`section ${className}`}>
+    <section 
+      id={id} 
+      className={`section ${className}`}
+      style={{ minHeight: '100vh' }}
+    >
       {children}
     </section>
-  )
-}
+  );
+};
 
-export default Section
+export default Section;
