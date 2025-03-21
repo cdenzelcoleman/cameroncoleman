@@ -7,7 +7,8 @@
 body {
   background-color: #000;
   color: #fff;
-  font-family: 'Press Start 2P', monospace; /* Use monospace fallback */
+  font-family: 'Press Start 2P', monospace;
+  font-display: swap;
 }
 
 .pixel-border {
@@ -33,4 +34,56 @@ body {
 .pixel-input {
   font-family: 'Press Start 2P', cursive;
   font-size: 0.8rem;
+}
+.parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.level-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.8) 0%,
+    rgba(0,0,0,0.4) 50%,
+    rgba(0,0,0,0.8) 100%
+  );
+  mix-blend-mode: multiply;
+}
+
+.pixel-glitch {
+  animation: glitch 5s infinite linear;
+}
+
+@keyframes glitch {
+  2%, 64% {
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%, 60% {
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62% {
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+/* Add scanline effect */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.05) 0px,
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1;
 }

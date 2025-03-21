@@ -10,7 +10,7 @@ export default {
         secondary: '#00dfff',
       },
       backgroundImage: {
-        'pixel-art': "url('/src/assets/pixel-bg.png')"
+        'pixel-art': "url('/assets/pixel-bg.png')"
       }
     }
   },

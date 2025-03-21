@@ -3,6 +3,8 @@ main {
 }
 .container {
   scroll-behavior: smooth;
+  position: relative;
+  z-index: 1;
 }
 .section {
   min-height: 100vh;

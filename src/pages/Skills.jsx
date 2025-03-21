@@ -1,3 +1,4 @@
+import 'reactflow/dist/base.css';
 import Section from '../components/Section';
 import { ReactFlow, Controls } from 'reactflow';
 import 'reactflow/dist/style.css';
