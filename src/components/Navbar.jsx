@@ -13,16 +13,29 @@ function Navbar() {
     { id: 'bonus', label: 'BONUS LEVEL' }
   ];
 
-  // Keyboard navigation
+  const handleLinkClick = (id, e) => {
+    e.preventDefault();
+    setActiveSection(id);
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       const currentIndex = links.findIndex(link => link.id === activeSection);
       if (e.key === 'ArrowRight') {
         const nextIndex = (currentIndex + 1) % links.length;
-        setActiveSection(links[nextIndex].id);
+        const section = document.getElementById(links[nextIndex].id);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
       } else if (e.key === 'ArrowLeft') {
         const prevIndex = (currentIndex - 1 + links.length) % links.length;
-        setActiveSection(links[prevIndex].id);
+        const section = document.getElementById(links[prevIndex].id);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
       }
     };
 
@@ -47,7 +60,7 @@ function Navbar() {
                   ? 'text-primary pixel-text-glow' 
                   : 'text-secondary'
               }`}
-              onClick={() => setActiveSection(link.id)}
+              onClick={(e) => handleLinkClick(link.id, e)}
             >
               {link.label}
               <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary group-hover:w-full transition-all duration-300" />
@@ -58,20 +71,21 @@ function Navbar() {
       
       {/* Progress Bar */}
       <div className="w-full h-2 bg-black/50 relative pixel-border">
-        <motion.div 
-          className="h-full bg-primary"
-          style={{ width: `${scrollProgress * 100}%` }}
-          initial={{ width: 0 }}
-          animate={{ width: `${scrollProgress * 100}%` }}
-          transition={{ duration: 0.5, ease: 'circOut' }}
-        />
+        <div className='max-w-6xl mx-auto'>
+          <motion.div 
+            className="h-full bg-primary"
+            style={{ width: `${scrollProgress * 100}%` }}
+            initial={{ width: 0 }}
+            animate={{ width: `${scrollProgress * 100}%` }}
+            transition={{ duration: 0.5, ease: 'circOut' }}
+          />
+        </div>
         <div className="absolute inset-0 pixel-scanline" />
         <div className="absolute top-0 right-0 text-xs text-primary font-retro">
-          {Math.round(scrollProgress * 100)}%
+          {Math.round(scrollProgress * 100)}%       
         </div>
       </div>
 
-      {/* CRT Effect Overlay */}
       <div className="absolute inset-0 pointer-events-none pixel-scanline" />
     </nav>
   );

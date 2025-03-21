@@ -10,12 +10,12 @@ import BackgroundManager from './components/BackgroundManager';
 import './App.css';
 
 function App() {
-  return (
-    <div className="container">
-      <BackgroundManager />
-      <h1 className="text-primary z-10 relative">Cameron Coleman</h1>
+    return (
+      <div className="container">
+        <BackgroundManager />
+            <h1 className="text-primary z-10 relative">Cameron Coleman</h1>
       <Navbar />
-      <main className="relative z-10">
+      <main>
         <About />
         <Projects />
         <Skills />
