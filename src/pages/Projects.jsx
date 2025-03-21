@@ -1,4 +1,6 @@
+import Section from '../components/Section';
 import { ReactFlow, Controls } from 'reactflow';
+import 'reactflow/dist/style.css';
 
 const projectNodes = [
   {
@@ -11,7 +13,6 @@ const projectNodes = [
     },
     style: { backgroundColor: '#00dfff', width: 200 }
   },
-  // Add more projects...
 ];
 
 const Projects = () => (

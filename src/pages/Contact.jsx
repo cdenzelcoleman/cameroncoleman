@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Section from '../components/Section';
 
 const Contact = () => (
   <Section id="contact">

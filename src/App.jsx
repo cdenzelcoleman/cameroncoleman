@@ -11,7 +11,7 @@ import './App.css';
 function App() {
     return (
       <div className="container">
-        <h1 className="text-primary">Test Text</h1>
+        <h1 className="text-primary">Cameron Coleman</h1>
       <Navbar />
       <main>
         <About />
