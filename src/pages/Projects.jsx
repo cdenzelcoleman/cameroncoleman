@@ -17,15 +17,17 @@ const projectNodes = [
 
 const Projects = () => (
   <Section id="projects">
-    <div className="p-8 w-full h-[80vh]">
-      <h1 className="text-4xl mb-4 pixel-text">Project Network</h1>
-      <ReactFlow
-        nodes={projectNodes}
-        className="pixel-border"
-        fitView
-      >
-        <Controls />
-      </ReactFlow>
+    <div className="max-w-6xl mx-auto p-6 sm:p-8 lg:p-12 w-full">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl mb-8 pixel-text">Project Network</h1>
+      <div className="w-full h-[70vh] sm:h-[80vh]">
+        <ReactFlow
+          nodes={projectNodes}
+          className="pixel-border"
+          fitView
+        >
+          <Controls />
+        </ReactFlow>
+      </div>
     </div>
   </Section>
 );

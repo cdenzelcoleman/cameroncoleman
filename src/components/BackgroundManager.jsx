@@ -49,7 +49,7 @@ export default function BackgroundManager() {
   return (
     <div 
       ref={bgRef}
-      className="fixed top-0 left-0 w-full h-full bg-cover bg-center z-0"
+      className="fixed top-0 left-0 w-screen h-full bg-cover bg-center z-0 pointer-events-none"
       style={{
         backgroundImage: `url(${backgrounds.about})`,
         opacity: 1

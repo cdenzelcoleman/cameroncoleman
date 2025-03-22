@@ -11,11 +11,12 @@ import './App.css';
 
 function App() {
     return (
-      <div className="container">
+      <div className="main-container">
         <BackgroundManager />
-            <h1 className="text-primary z-10 relative">Cameron Coleman</h1>
+        <h1 className="text-primary">Cameron Coleman</h1>
+        <div className="content-wrapper">
       <Navbar />
-      <main>
+      <main className="spaced-sections">
         <About />
         <Projects />
         <Skills />
@@ -24,6 +25,7 @@ function App() {
       </main>
       <Footer />
     </div>
+  </div>
   );
 }
 

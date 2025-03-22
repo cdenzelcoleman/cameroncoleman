@@ -4,11 +4,28 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+--scrollbar-compensation: calc(100vw - 100%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #000;
   color: #fff;
   font-family: 'Press Start 2P', monospace;
   font-display: swap;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin-left: var(--scrollbar-compensation);
 }
 
 .pixel-border {
@@ -71,11 +88,6 @@ body {
 }
 
 .scanlines {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: repeating-linear-gradient(
     0deg,
     rgba(255,255,255,0.05) 0px,
@@ -83,6 +95,11 @@ body {
     transparent 1px,
     transparent 2px
   );
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 1;
 }
@@ -104,3 +121,55 @@ body {
 .backdrop-blur-sm {
   backdrop-filter: blur(4px);
 }
+
+/* Timeline Styles */
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+  border-left: 2px solid #ff007f;
+}
+
+.timeline-date {
+  position: absolute;
+  left: -1rem;
+  transform: translateX(-100%);
+  color: #00dfff;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Skill Cards */
+.skill-card {
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.skill-card:hover {
+  border-color: #00dfff;
+  box-shadow: 0 0 10px rgba(0, 223, 255, 0.2);
+}
+
+/* Tech Badges */
+.tech-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin: 0 0.5rem 0.5rem 0;
+  border: 2px solid #ff007f;
+  box-shadow: 2px 2px 0 #00dfff;
+  transition: all 0.2s ease;
+}
+
+/* Hobby Cards */
+.hobby-card {
+  padding: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.hobby-card:hover {
+  border-color: #ff007f;
+  background: rgba(255, 0, 127, 0.05);
+}
+
