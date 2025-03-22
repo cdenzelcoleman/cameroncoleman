@@ -35,15 +35,14 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="pixel-border bg-black/80 p-8 mb-12"
         >
-          <h1 className="text-4xl sm:text-5xl mb-6 pixel-text-glow">Cameron Coleman</h1>
           <p className="text-secondary mb-4">
-            Full-Stack Developer | Tech Innovator | Creative Problem Solver
+            <h5 className="text-4xl sm:text-5xl mb-6 pixel-text-glow">Full-Stack Developer | Backend Engineer | Software Engineer</h5>
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Professional Summary */}
             <div>
               <p className="mb-6">
-                I'm Cameron Coleman, a proactive full-stack developer passionate about creating dynamic 
+                Hi, I'm Cameron Coleman, a proactive full-stack developer passionate about creating dynamic 
                 digital experiences. I thrive on solving complex challenges with clean, efficient code—from 
                 designing engaging front-end interfaces using React to building robust backends with Node.js 
                 and Django. When I'm not coding, I'm spending time with my family, skateboarding, or 
