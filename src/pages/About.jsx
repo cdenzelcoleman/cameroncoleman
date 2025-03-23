@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaPython, FaDocker } from 'react-icons/fa';
 import { SiDjango, SiPostgresql, SiMongodb } from 'react-icons/si';
 
-// Animation variants
+// Animation
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: { 
@@ -50,7 +50,7 @@ const About = () => {
               </p>
             </div>
 
-            {/* Technical Expertise */}
+            {/* Tech Expertise */}
             <motion.div 
               className="pixel-border p-6 bg-black/70"
               initial={{ scale: 0.95 }}
