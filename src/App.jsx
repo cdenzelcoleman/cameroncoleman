@@ -16,6 +16,7 @@ function App() {
         <h1 className="text-primary">Cameron Coleman</h1>
         <div className="content-wrapper">
       <Navbar />
+      <div className="container">
       <main className="spaced-sections">
         <About />
         <Projects />
@@ -26,6 +27,7 @@ function App() {
       <Footer />
     </div>
   </div>
+      </div>
   );
 }
 
