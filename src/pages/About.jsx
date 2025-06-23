@@ -35,9 +35,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="pixel-border bg-black/80 p-8 mb-12"
         >
-          <p className="text-secondary mb-4">
-            <h5 className="text-4xl sm:text-5xl mb-6 pixel-text-glow">Full-Stack Developer | Backend Engineer | Software Engineer</h5>
-          </p>
+          <h2 className="text-4xl sm:text-5xl mb-6 pixel-text-glow text-secondary">Full-Stack Developer | Backend Engineer | Software Engineer</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Professional Summary */}
             <div>
@@ -67,7 +65,7 @@ const About = () => {
                   { Icon: SiMongodb, label: 'MongoDB' },
                 ].map(({ Icon, label }, index) => (
                   <motion.div
-                    key={label}
+                    key={index}
                     className="skill-card"
                     variants={itemVariants}
                   >
@@ -150,7 +148,7 @@ const About = () => {
             <h3 className="text-xl pixel-text">The Campaign</h3>
             <p className="text-secondary mt-2">AI-Powered RPG Manager</p>
             <div className="tech-stack mt-4">
-              {['React', 'Node.js', 'OpenAI API'].map((tech, index) => (
+              {['React', 'Node.js', 'OpenAI API'].map((tech) => (
                 <motion.span 
                   key={tech}
                   className="tech-badge"
@@ -180,7 +178,7 @@ const About = () => {
               { emoji: '📚', label: 'Comic Books' },
               { emoji: '👨👩👧', label: 'Family Time' },
               { emoji: '💡', label: 'Innovation' }
-            ].map(({ emoji, label }, index) => (
+            ].map(({ emoji, label }) => (
               <motion.div
                 key={label}
                 className="hobby-card"

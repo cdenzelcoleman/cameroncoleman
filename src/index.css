@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+/* Preload critical resources */
+:root {
+  --color-primary: #ff007f;
+  --color-secondary: #00dfff;
+  --color-accent: #00ff00;
+  --color-bg: #000;
+  --color-text: #fff;
+}
+
 @import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/typography";
-@import "tailwindcss/forms";
-@import "tailwindcss/aspect-ratio";
+@tailwind utilities;
 
 
 :root {
@@ -26,6 +30,7 @@ body {
   font-display: swap;
   width: 100vw;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 html {
@@ -35,8 +40,8 @@ html {
 }
 
 .pixel-border {
-  border: 3px solid #ff007f;
-  box-shadow: 4px 4px 0 #00dfff;
+  border: 3px solid var(--color-primary);
+  box-shadow: 4px 4px 0 var(--color-secondary);
 }
 
 .pixel-text {
@@ -47,6 +52,10 @@ html {
   border: 2px solid #00dfff;
   box-shadow: 3px 3px 0 #ff007f;
   transition: all 0.1s ease;
+}
+
+.pixel-button:hover {
+  filter: brightness(1.1);
 }
 
 .pixel-button:active {

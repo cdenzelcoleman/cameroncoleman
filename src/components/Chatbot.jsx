@@ -1,7 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
+import { useUI } from '../context/UIContext';
 
 const Chatbot = () => {
-  const { chatbotOpen, setChatbotOpen } = useUI();
+  const { chatbotOpen } = useUI();
   
   return (
     <AnimatePresence>

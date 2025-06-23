@@ -13,11 +13,10 @@ main {
 .section {
   min-height: 100vh;
   display: flex;
-  /* position: relative; */
   align-items: center;
-  /* justify-content: center; */
   width: 100%;
   padding: 2rem 0;
+  scroll-margin-top: 4rem;
 }
 
 .section > div {
@@ -28,6 +27,22 @@ html {
   scroll-behavior: smooth;
 }
 
+
+@media (max-width: 768px) {
+  .pixel-text-glow {
+    font-size: 1.2rem;
+  }
+  
+  .timeline-date {
+    position: static;
+    transform: none;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-item {
+    padding-left: 1rem;
+  }
+}
 
 @media (min-width: 640px) {
   .container {

@@ -13,20 +13,23 @@ function App() {
     return (
       <div className="main-container">
         <BackgroundManager />
-        <h1 className="text-primary">Cameron Coleman</h1>
+        <header className="text-center py-8">
+        <h1 className="text-primary text-5xl md:text-6xl pixel-text-glow">Cameron Coleman</h1>
+        <p className="text-secondary mt-4 text-lg">Full-Stack Developer & Software Engineer</p>
+      </header>
         <div className="content-wrapper">
-      <Navbar />
-      <div className="container">
-      <main className="spaced-sections">
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
-        <Bonus />
-      </main>
-      <Footer />
-    </div>
-  </div>
+          <Navbar />
+          <div className="container">
+            <main className="spaced-sections">
+              <About />
+              <Projects />
+              <Skills />
+              <Contact />
+              <Bonus />
+            </main>
+            <Footer />
+          </div>
+        </div>
       </div>
   );
 }

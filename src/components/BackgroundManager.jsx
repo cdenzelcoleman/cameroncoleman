@@ -28,15 +28,14 @@ export default function BackgroundManager() {
       trigger: ".section",
       start: "top center",
       end: "bottom center",
-      onEnter: self => {
-        const sectionId = self.trigger.id;
+      onEnter: () => {
         gsap.to(bgRef.current, {
           opacity: 0.7,
           duration: 1,
           ease: 'power2.inOut'
         });
       },
-      onLeaveBack: self => {
+      onLeaveBack: () => {
         gsap.to(bgRef.current, {
           opacity: 1,
           duration: 1,

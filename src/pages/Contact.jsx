@@ -12,23 +12,33 @@ const Contact = () => (
         >
           Contact Terminal
         </motion.h1>
-        <form className="space-y-6 pixel-form">
+        <form className="space-y-6 pixel-form" action="#" method="POST">
           <input
             type="text"
+            name="name"
             placeholder="Name"
+            required
+            aria-label="Your name"
             className="w-full p-3 sm:p-4 bg-black text-primary border-2 border-primary pixel-input text-sm sm:text-base"
           />
           <input
             type="email"
+            name="email"
             placeholder="Email"
+            required
+            aria-label="Your email address"
             className="w-full p-3 sm:p-4 bg-black text-primary border-2 border-primary pixel-input text-sm sm:text-base"
           />
           <textarea
+            name="message"
             placeholder="Message"
+            required
+            aria-label="Your message"
             className="w-full p-3 sm:p-4 bg-black text-primary border-2 border-primary pixel-input text-sm sm:text-base"
             rows="4"
           />
           <motion.button
+            type="submit"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="w-full p-3 sm:p-4 bg-primary text-black font-bold pixel-button text-sm sm:text-base"

@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useUI } from '../context/UIContext';
 
 function Navbar() {
   const { activeSection, setActiveSection, scrollProgress } = useUI();
 
-  const links = [
+  const links = useMemo(() => [
     { id: 'about', label: 'Level 1: Bio' },
     { id: 'projects', label: 'Level 2: Projects' },
     { id: 'skills', label: 'Level 3: Skills' },
     { id: 'contact', label: 'Level 4: Contact' },
     { id: 'bonus', label: 'BONUS LEVEL' }
-  ];
+  ], []);
 
   const handleLinkClick = (id, e) => {
     e.preventDefault();
@@ -48,7 +48,7 @@ function Navbar() {
   }, [activeSection, links, setActiveSection]);
 
   return (
-    <nav className="bg-black/80 text-secondary p-4 fixed top-0 w-full z-10 pixel-border backdrop-blur-sm">
+    <nav className="bg-black/80 text-secondary p-4 fixed top-0 w-full z-10 pixel-border backdrop-blur-sm" role="navigation" aria-label="Main navigation">
       <div className="max-w-6xl mx-auto">
         <ul className="flex justify-around mb-2">
           {links.map((link) => (
